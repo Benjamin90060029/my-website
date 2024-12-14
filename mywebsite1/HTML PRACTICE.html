@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My self-introduction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .content .box {
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .content .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            nav {
+                text-align: left;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My self-introduction</h1>
+    </header>
+
+    <nav>
+        <a id="home-link" href="#home">Home</a>
+        <a id="about-link" href="#about">About</a>
+        <a id="services-link" href="#services">Services</a>
+        <a id="contact-link" href="#contact">Contact</a>
+    </nav>
+
+    <div class="container" id="main-content">
+        <h2>Welcome!</h2>
+        <p>This is the home page content. Use the navigation menu to explore more.</p>
+        <section class="content">
+            <div class="box">
+                <h2>About Me</h2>
+                <p>This is a short paragraph about myself. I love learning new things and sharing them with others.</p>
+            </div>
+            <div class="box">
+                <h2>My Services</h2>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Graphic Design</li>
+                    <li>SEO Optimization</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Contact Me</h2>
+                <p>You can reach me by email at <a href="mailto:example@example.com">example@example.com</a>.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 My First Web Page</p>
+    </footer>
+
+    <script>
+        // 設定按鈕點擊事件
+        document.getElementById('home-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('main-content').innerHTML =
+                '<h2>Welcome!</h2>' +
+                '<p>This is the home page content. Use the navigation menu to explore more.</p>' +
+                '<section class="content">' +
+                    '<div class="box">' +
+                        '<h2>About Me</h2>' +
+                        '<p>This is a short paragraph about myself. I love learning new things and sharing them with others.</p>' +
+                    '</div>' +
+                    '<div class="box">' +
+                        '<h2>My Services</h2>' +
+                        '<ul>' +
+                            '<li>Web Development</li>' +
+                            '<li>Graphic Design</li>' +
+                            '<li>SEO Optimization</li>' +
+                        '</ul>' +
+                    '</div>' +
+                    '<div class="box">' +
+                        '<h2>Contact Me</h2>' +
+                        '<p>You can reach me by email at <a href="mailto:example@example.com">example@example.com</a>.</p>' +
+                    '</div>' +
+                '</section>';
+        });
+
+        document.getElementById('about-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('main-content').innerHTML =
+                '<h2>I\'m Ben</h2>' +
+                '<p>This is a short paragraph about myself. I love learning new things and sharing them with others.</p>';
+        });
+
+        document.getElementById('services-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('main-content').innerHTML =
+                '<h2>My Services</h2>' +
+                '<ul>' +
+                    '<li>Web Development</li>' +
+                    '<li>Graphic Design</li>' +
+                    '<li>SEO Optimization</li>' +
+                '</ul>';
+        });
+
+        document.getElementById('contact-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('main-content').innerHTML =
+                '<h2>Contact Me</h2>' +
+                '<p>You can reach me by email at <a href="mailto:example@example.com">example@example.com</a>.</p>';
+        });
+    </script>
+</body>
+</html>
